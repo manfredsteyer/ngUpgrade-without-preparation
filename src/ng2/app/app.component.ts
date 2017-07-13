@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { PHONE_SERVICE } from "ng2/app/phone.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+   phones: any[] = [];
+
+  constructor(
+    @Inject(PHONE_SERVICE) private phoneService: any) {
+    }
+
+    ngOnInit() {
+      this.phones = this.phoneService.query();
+    }
+
 }
