@@ -8,24 +8,25 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "ng1",
         "assets",
         "favicon.ico"
       ],
       "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "test.ts",
+      "main": "ng2/main.ts",
+      "polyfills": "ng2/polyfills.ts",
+      "test": "ng2/test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "ng2/styles.css"
       ],
       "scripts": [],
-      "environmentSource": "environments/environment.ts",
+      "environmentSource": "ng2/environments/environment.ts",
       "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "dev": "ng2/environments/environment.ts",
+        "prod": "ng2/environments/environment.prod.ts"
       }
     }
   ],
@@ -36,13 +37,13 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json"
+      "project": "tsconfig.app.json"
     },
     {
-      "project": "src/tsconfig.spec.json"
+      "project": "tsconfig.spec.json"
     },
     {
-      "project": "e2e/tsconfig.e2e.json"
+      "project": "tsconfig.e2e.json"
     }
   ],
   "test": {

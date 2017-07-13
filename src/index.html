@@ -5,10 +5,43 @@
   <title>Migrated</title>
   <base href="/">
 
+  <!-- ng1 -->
+  <link rel="stylesheet" href="ng1/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="ng1/app.css" />
+  <link rel="stylesheet" href="ng1/app.animations.css" />
+
+  <script src="ng1/bower_components/jquery/dist/jquery.js"></script>
+  <script src="ng1/bower_components/angular/angular.js"></script>
+  <script src="ng1/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="ng1/bower_components/angular-resource/angular-resource.js"></script>
+  <script src="ng1/bower_components/angular-route/angular-route.js"></script>
+  <script src="ng1/app.module.js"></script>
+  <script src="ng1/app.config.js"></script>
+  <script src="ng1/app.animations.js"></script>
+  <script src="ng1/core/core.module.js"></script>
+  <script src="ng1/core/checkmark/checkmark.filter.js"></script>
+  <script src="ng1/core/phone/phone.module.js"></script>
+  <script src="ng1/core/phone/phone.service.js"></script>
+  <script src="ng1/phone-list/phone-list.module.js"></script>
+  <script src="ng1/phone-list/phone-list.component.js"></script>
+  <script src="ng1/phone-detail/phone-detail.module.js"></script>
+  <script src="ng1/phone-detail/phone-detail.component.js"></script>
+  <!-- /ng1 -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
+<body ng-app="phonecatApp">
+
+
+  <!-- ng1 -->
+  <div class="view-container">
+      <div ng-view class="view-frame"></div>
+  </div>
+  <!-- /ng1 -->
+
   <app-root></app-root>
+
+
 </body>
 </html>
