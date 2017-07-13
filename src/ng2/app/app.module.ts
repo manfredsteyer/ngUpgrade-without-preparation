@@ -28,11 +28,15 @@ angular.module('phonecatApp')
   providers: [
     phoneServiceProvider
   ],
-  // bootstrap: [AppComponent] // No Bootstrap-Component
+  bootstrap: [AppComponent]
 })
+
 export class AppModule {
+/*
   constructor(private upgrade: UpgradeModule) { }
   ngDoBootstrap() {
     this.upgrade.bootstrap(document.body, ['phonecatApp'], { strictDi: true });
   }
+*/
 }
+
