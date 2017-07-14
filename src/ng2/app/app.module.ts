@@ -9,9 +9,9 @@ import { phoneServiceProvider } from "ng2/app/phone.service";
 
 declare var angular: any;
 
-class CustomHandlingStrategy implements UrlHandlingStrategy {
+export class CustomHandlingStrategy implements UrlHandlingStrategy {
   shouldProcessUrl(url) {
-    return url.toString().startsWith("/feature1") || url.toString() === "/";
+    return url.toString().startsWith("/ng2-route") || url.toString() == "/"
   }
   extract(url) { return url; }
   merge(url, whole) { return url; }
@@ -33,12 +33,18 @@ angular.module('phonecatApp')
     UpgradeModule,
     RouterModule.forRoot([
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'ng2-route'
+      },
+      {
         path: 'ng2-route',
         component: Ng2DemoComponent
       }
     ],
     {
-      useHash: true
+      useHash: true,
+      enableTracing: true
     }
     )
   ],
