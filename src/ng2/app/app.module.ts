@@ -59,11 +59,15 @@ angular.module('phonecatApp')
 })
 
 export class AppModule {
-/*
-  constructor(private upgrade: UpgradeModule) { }
+
+  constructor(private upgrade: UpgradeModule) { 
+    console.debug('UpgradeModule', upgrade);
+  }
+
+  /*
   ngDoBootstrap() {
     this.upgrade.bootstrap(document.body, ['phonecatApp'], { strictDi: true });
   }
-*/
+  */
 }
 
